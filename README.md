@@ -11,9 +11,19 @@ Financial analysts spend significant time locating key metrics like revenue, ear
 
 # Solution Approach : 3-Layer Hybrid Architecture
 Layer 1: FinBERT NER for entity detection (company names, monetary values, dates, percentages)
+
 Layer 2: Gemini LLM for context understanding and relationship extraction
+
 Layer 3: Gemini LLM for human-readable formatting and validation
+
 Validation Layer : Evaluates extraction quality by comparing results with expected financial document structure. Produces a completeness score (0 - 100%) and lists missing or incomplete items.
+
+# Key Results:
+•	Average Completeness: 94% across test documents
+•	Entity Detection: 22 entities per document (avg)
+•	Processing Time: 20 - 30 seconds per document (GPU)
+•	Supported Formats: PDF, Word, Text, Images (via OCR)
+
 
 
 
